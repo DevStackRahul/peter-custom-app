@@ -1,0 +1,445 @@
+{% if product.tags contains 'reddingo'%}
+{%- assign current_variant = product.selected_or_first_available_variant -%}
+
+<input id="custom-engraving" type="hidden" name="properties[_Vendor]" value="reddingo">
+
+<div class="lines">
+  
+  <label class="extra-property">Personalised Engraving</label>
+  <div class="tabs">
+    <span id="tab1" class="active">Line 1</span>
+    <span id="tab2">Lines 2</span>
+    <span id="tab3">Lines 3</span>
+    <span id="tab4">Lines 4</span>
+  </div>  
+
+<div class="line-address name-tab">
+  <div class="main-div"><label>Line 1</label><p class="character-count-text"><span id ="counter">14</span> Characters left</p></div>
+<input id="line1" class="input-active" type="text" name="properties[Line 1]" value="" placeholder="Dog's Name" maxlength="14" data-tab="1">
+</div>
+<div class="line-address phone-tab">
+
+  <div class="main-div"><label>Line 2</label><p class="character-count-text"><span id ="counter2">14</span> Characters left</p>
+  </div>
+    <input id="line2" type="text" name="properties[Line 2]" value="" placeholder="Phone Number" maxlength="14" data-tab="1">
+</div>
+
+  <div class="line-address custom-text-tab-1">
+<div class="main-div"><label>Line 3</label><p class="character-count-text"><span id ="counter3">14</span> Characters left</p>
+    </div><input id="line3" type="text" name="properties[Line 3]" value="" placeholder="Custom Text" maxlength="14" data-tab="1">
+  </div>
+ <div class="line-address custom-text-tab-2">
+<div class="main-div"><label>Line 4</label><p class="character-count-text"><span id ="counter4">14</span> Characters left</p>
+   </div> <input id="line4" type="text" name="properties[Line 4]" value="" placeholder="Custom text (not available for small tags)" maxlength="14" data-tab="1">
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+    // for dawn theme
+     // var from = $('.product-form__submit'); 
+      //end 
+    
+    // for debut theme
+      var from = $('.product-form__cart-submit'); 
+    // end
+      from.attr('disabled', 'disabled');
+    
+    $('#line1').keyup(function () {
+        validatelineOne();
+        validatelineTwo();
+        validatelineThree();
+        validatelineFour();
+    });
+      $('#line2').keyup(function () {
+        validatelineOne();
+        validatelineTwo();
+        validatelineThree();
+        validatelineFour();
+    });
+      $('#line3').keyup(function () {
+        validatelineOne();
+        validatelineTwo();
+        validatelineThree();
+        validatelineFour();
+    });
+      $('#line4').keyup(function () {
+        validatelineOne();
+        validatelineTwo();
+        validatelineThree();
+        validatelineFour();
+    });
+
+    function validatelineOne() {
+
+      var line_num =$('#line1').attr('data-tab');
+
+
+      var val1 = $('#line1').val();
+      var val2 = $('#line2').val();
+      var val3 = $('#line3').val();
+      var val4 = $('#line4').val();
+
+
+      if( line_num == 1){
+
+        if(val1 != '')
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+      }else if( line_num == 2){
+
+        if(val1 != '' && val2 != '')
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+      }
+      else if( line_num == 3 ){
+        if(val1 != '' && val2 != '' && val3 != '' )
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+      }else{
+        if(val1 != '' && val2 != '' && val3 != ''  && val4 != '')
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+
+      }
+    }
+     function validatelineTwo() {
+  
+
+      var line_num =$('#line2').attr('data-tab');
+
+
+      var val1 = $('#line1').val();
+      var val2 = $('#line2').val();
+      var val3 = $('#line3').val();
+      var val4 = $('#line4').val();
+
+
+      if( line_num == 1){
+
+        if(val1 != '')
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+      }else if( line_num == 2){
+
+        if(val1 != '' && val2 != '')
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+      }
+      else if( line_num == 3 ){
+        if(val1 != '' && val2 != '' && val3 != '' )
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+      }else{
+        if(val1 != '' && val2 != '' && val3 != ''  && val4 != '')
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+
+      }
+    }
+     function validatelineThree() {
+   
+
+      var line_num =$('#line3').attr('data-tab');
+
+      var val1 = $('#line1').val();
+      var val2 = $('#line2').val();
+      var val3 = $('#line3').val();
+      var val4 = $('#line4').val();
+
+
+      if( line_num == 1){
+
+        if(val1 != '')
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+      }else if( line_num == 2){
+
+        if(val1 != '' && val2 != '')
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+      }
+      else if( line_num == 3 ){
+        if(val1 != '' && val2 != '' && val3 != '' )
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+      }else{
+        if(val1 != '' && val2 != '' && val3 != ''  && val4 != '')
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+
+      }
+    }
+     function validatelineFour() {
+     
+
+      var line_num =$('#line4').attr('data-tab');
+
+
+      var val1 = $('#line1').val();
+      var val2 = $('#line2').val();
+      var val3 = $('#line3').val();
+      var val4 = $('#line4').val();
+
+
+      if( line_num == 1){
+
+        if(val1 != '')
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+      }else if( line_num == 2){
+
+        if(val1 != '' && val2 != '')
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+      }
+      else if( line_num == 3 ){
+        if(val1 != '' && val2 != '' && val3 != '' )
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+      }else{
+        if(val1 != '' && val2 != '' && val3 != ''  && val4 != '')
+        {
+          from.removeAttr("disabled");
+        }
+        else{
+        from.attr('disabled', 'disabled');
+        }
+
+      }
+    }
+    
+   $('.line-address').hide();
+  $('.name-tab').show();  
+ 
+   $('#tab1').on('click', function(){
+  $('.name-tab').slideDown();
+  $('.phone-tab').slideUp();
+  $('.custom-text-tab-1').slideUp();
+  $('.custom-text-tab-2').slideUp();
+  $('#line1').attr('data-tab','1');
+  $('#line2').attr('data-tab','1');
+  $('#line3').attr('data-tab','1');
+  $('#line4').attr('data-tab','1');
+ 
+     $('#line2').val('');
+       $('#line3').val('');
+       $('#line4').val(''); 
+     
+     
+  
+     validatelineOne();
+     validatelineTwo();
+     validatelineThree();
+     validatelineFour();
+
+
+  }); 
+    
+    
+  $('#tab2').on('click', function(){
+  $('.phone-tab').slideDown();
+  $('.name-tab').slideDown();
+  $('.custom-text-tab-1').slideUp();
+  $('.custom-text-tab-2').slideUp();
+  $('#line1').attr('data-tab','2');
+  $('#line2').attr('data-tab','2');
+  $('#line3').attr('data-tab','2');
+  $('#line4').attr('data-tab','2');
+    
+       $('#line3').val('');
+       $('#line4').val(''); 
+  
+    
+   
+        validatelineOne();
+        validatelineTwo();
+        validatelineThree();
+        validatelineFour();
+ 
+
+  }); 
+    
+    
+    
+  $('#tab3').on('click', function(){
+  $('.phone-tab').slideDown();
+  $('.name-tab').slideDown();
+  $('.custom-text-tab-1').slideDown();
+  $('.custom-text-tab-2').slideUp();
+  $('#line1').attr('data-tab','3');
+  $('#line2').attr('data-tab','3');
+  $('#line3').attr('data-tab','3');
+  $('#line4').attr('data-tab','3');
+    
+    $('#line4').val('');
+       validatelineOne();
+        validatelineTwo();
+        validatelineThree();
+        validatelineFour();
+ 
+
+    
+  
+  });
+    
+    
+  $('#tab4').on('click', function(){
+  $('.phone-tab').slideDown();
+  $('.name-tab').slideDown();
+  $('.custom-text-tab-1').slideDown();
+  $('.custom-text-tab-2').slideDown();
+ 
+  $('#line1').attr('data-tab','4');
+  $('#line2').attr('data-tab','4');
+  $('#line3').attr('data-tab','4');
+  $('#line4').attr('data-tab','4');
+  
+           validatelineOne();
+        validatelineTwo();
+        validatelineThree();
+        validatelineFour();
+ 
+
+  });
+    
+  
+  $('.tabs span').on('click', function(){
+  $('.tabs span').removeClass('active');
+  $('.tabs span').addClass('main');
+  $(this).toggleClass('main');
+  $(this).addClass('active');    
+   
+  });
+    
+    
+    $("#line1").on('keyup', function(){ 
+          var Characters = $("#line1").val().replace(/(<([^>]+)>)/ig,"").length;  
+          var bal_char = 14 - Characters;
+           $("#counter").text(bal_char);
+     
+      });
+  $("#line2").on('keyup', function(){ 
+          var Characters = $("#line2").val().replace(/(<([^>]+)>)/ig,"").length;  
+          var bal_char = 14 - Characters;
+           $("#counter2").text(bal_char);
+   
+      });
+  $("#line3").on('keyup', function(){ 
+          var Characters = $("#line3").val().replace(/(<([^>]+)>)/ig,"").length;  
+          var bal_char = 14 - Characters;
+           $("#counter3").text(bal_char);
+    
+      });
+  $("#line4").on('keyup', function(){ 
+      var Characters = $("#line4").val().replace(/(<([^>]+)>)/ig,"").length;  
+      var bal_char = 14 - Characters;
+      $("#counter4").text(bal_char);
+   
+      });
+       
+    
+    
+    
+    
+    
+    
+});
+
+  
+</script>
+<style>
+  .lines {
+    position: relative;
+    z-index: 9;
+}
+  .tabs span {
+    border: 1px solid #cccccc;
+    padding: 6px 14px;
+    display: inline-block;
+    cursor: pointer;
+}
+  .tabs span.active {
+    background: #dddddd;
+}
+  .tabs span.main{
+    background: #fff;
+}
+  .main-div {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+  .line-address,.tabs,.custom-text-tab-2{margin-bottom:15px;}
+  p.character-count-text {
+    font-size: 12px;
+    color: #b7adad;
+}
+  .line-address input {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+}
+</style>
+
+{% endif %}
